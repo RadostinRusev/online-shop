@@ -1,0 +1,30 @@
+<form #form="ngForm" action="" (ngSubmit)="sendEmail(form)">
+  <p>Свържете с нас.</p>
+  <input
+    #nameInput="ngModel"
+    ngModel
+    required
+    name="name"
+    placeholder="Име"
+    class="textInput"
+    type="text"
+  />
+  <input #emailInput = "ngModel" ngModel required email name="email" placeholder="Имейл" class="textInput" type="email" />
+  <textarea
+    #messageInput = "ngModel"
+    ngModel
+    required
+    placeholder="Съобщение"
+    name="message"
+    cols="30"
+    rows="10"
+    class="textInput"
+  ></textarea>
+  <input value="Изпрати" class="submitBtn" type="submit" />
+</form>
+<aside>
+  <p><i class="fas fa-envelope"></i>babalisnuts@gmail.com</p>
+  <p><i class="fas fa-phone-square-alt"></i>tel</p>
+  <p><i class="fab fa-facebook-square"></i>facebook</p>
+  <p><i class="fab fa-instagram"></i>insta</p>
+</aside>

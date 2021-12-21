@@ -1,0 +1,227 @@
+<div class="item-container">
+<div *ngFor="let product of products">
+  
+  
+   <section class="product-section">
+    <div class="product-elements">
+      <img src={{product.imgSrc}} alt="">
+      <p>{{product.name}}</p>
+      <div>
+        <p class="product-element2" name="quantity">500g</p>
+        <p class="product-element3" name="quantity">1kg</p>
+      </div>
+      <div class="number-input">
+        <input
+          class="cart-quantity-input"
+          #numbers
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+        <input
+          class="cart-quantity-input"
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+      </div>
+
+      <p class="product-element-number">{{product.price}}</p>
+    </div>
+  </section>
+
+
+
+</div>
+</div>
+<<<<<<< HEAD
+=======
+<!-- <section class="products-wrapper">
+  <div class="product-div" *ngFor="let product of products">
+    <img class="img-el" src="{{ product.imgSrc }}" alt="" />
+    <p class="product-name">{{ product.name }}</p>
+    <label class="quantity-input" for="quantity">
+      <p>количество:</p>
+      <input  value="1" type="number" min="1">
+    </label>
+    <p class="price">{{product.price}}</p>
+  </div>
+</section> -->
+>>>>>>> 61c7554fac029fa6ad797acb9b1c8bcdf39fab4f
+
+<!-- <div class="item-container"> -->
+<!-- <section class="product-section">
+    <div class="product-elements">
+      <img src="assets/images/DSC0284.jpg" alt="" />
+      <p class="product-element">Ядка</p>
+      <div>
+        <p class="product-element2" name="quantity">500g</p>
+        <p class="product-element3" name="quantity">1kg</p>
+      </div>
+      <div class="number-input">
+        <input
+          class="cart-quantity-input"
+          #numbers
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+        <input
+          class="cart-quantity-input"
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+      </div>
+
+      <p class="product-element-number">8.99</p>
+    </div>
+  </section>
+  <section class="product-section">
+    <div class="product-elements">
+      <img src="assets/images/DSC0284.jpg" alt="" />
+      <p class="product-element">Ядка</p>
+      <div>
+        <p class="product-element2" name="quantity">500g</p>
+        <p class="product-element3" name="quantity">1kg</p>
+      </div>
+      <div class="number-input">
+        <input
+          class="cart-quantity-input"
+          #numbers
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+        <input
+          class="cart-quantity-input"
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+      </div>
+
+      <p class="product-element-number">8.99</p>
+    </div>
+  </section>
+  <section class="product-section">
+    <div class="product-elements">
+      <img src="assets/images/DSC0284.jpg" alt="" />
+      <p class="product-element">Ядка</p>
+      <div>
+        <p class="product-element2" name="quantity">500g</p>
+        <p class="product-element3" name="quantity">1kg</p>
+      </div>
+      <div class="number-input">
+        <input
+          class="cart-quantity-input"
+          #numbers
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+        <input
+          class="cart-quantity-input"
+          (change)="quantityChanged($event)"
+          type="number"
+          value="0"
+        />
+      </div>
+
+      <p class="product-element-number">8.99</p>
+    </div>
+  </section>
+</div> -->
+<form #form="ngForm" action="" (ngSubmit)="sendForm(form)">
+  <p>Данни за доставка:</p>
+  <p class="total">Цена:0.00 лева</p>
+  <input
+    #nameInput="ngModel"
+    ngModel
+    required
+    name="name"
+    placeholder="Име"
+    class="textInput"
+    type="text"
+  />
+  <ng-container *ngIf="nameInput.touched"
+    ><p *ngIf="nameInput.errors?.required" class="error-message">
+      Моля въведете вашето име.
+    </p></ng-container
+  >
+  <input
+    #surnameInput="ngModel"
+    ngModel
+    required
+    name="surname"
+    placeholder="Презиме"
+    class="textInput"
+    type="text"
+  />
+  <ng-container *ngIf="surnameInput.touched"
+    ><p *ngIf="surnameInput.errors?.required" class="error-message">
+      Моля въведете вашето презиме.
+    </p></ng-container
+  >
+  <input
+    #lastnameInput="ngModel"
+    ngModel
+    required
+    name="lastname"
+    placeholder="Фамилия"
+    class="textInput"
+    type="text"
+  />
+  <ng-container *ngIf="lastnameInput.touched"
+    ><p *ngIf="lastnameInput.errors?.required" class="error-message">
+      Моля въведете вашето фамилно име.
+    </p></ng-container
+  >
+  <input
+    #addressInput="ngModel"
+    ngModel
+    required
+    name="Address"
+    placeholder="Офис на еконт"
+    class="textInput"
+    type="text"
+  />
+  <ng-container *ngIf="addressInput.touched"
+    ><p *ngIf="addressInput.errors?.required" class="error-message">
+      Моля въведете адрес на офис на еконт за доставка.
+    </p></ng-container
+  >
+  <input
+    #PhoneInput="ngModel"
+    ngModel
+    name="PhoneNumber"
+    placeholder="+359XXXXXXXXX"
+    class="textInput"
+    type="text"
+  />
+  <ng-container *ngIf="PhoneInput.touched"
+    ><p *ngIf="PhoneInput.errors?.required" class="error-message">
+      Моля въведете вашият телефонен номер.
+    </p></ng-container
+  >
+  <input
+    #emailInput="ngModel"
+    ngModel
+    email
+    name="email"
+    placeholder="Електронна поща"
+    class="textInput"
+    type="email"
+  />
+  <textarea
+    #messageInput="ngModel"
+    ngModel
+    placeholder="Допълнително съобщение"
+    name="Message"
+    cols="30"
+    rows="10"
+    class="textInput"
+  ></textarea>
+  <input value="Поръчай" class="submitBtn" type="submit" />
+</form>
+<!-- <button (click)="onSave()">sell</button> -->

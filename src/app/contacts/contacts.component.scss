@@ -1,0 +1,68 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+input, textarea{
+    max-width: 40%;
+    margin: 20px;
+    min-height: 4%;
+}
+p{
+    margin: 10px;
+    font-size: 30px;
+}
+.submitBtn{
+    margin-right: 0px;
+    background-color: #333132;
+    color: white;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+}
+.submitBtn:hover{
+    background-color: #575456;
+}
+.textInput{
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+aside{
+    background-color: #333132;
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    color: white;
+    z-index: 2;
+    padding: 15px 150px 20px 15px;
+
+}
+div{
+    background-color: #fa512d;
+    position: absolute;
+    min-height: calc(64% - 2px);
+    min-width: 200px;
+    right: 0px;
+    bottom: 66px;
+}
+i{
+    margin-right: 20px;
+}
+@media only screen and (max-width: 1200px) {
+    aside {
+      position:relative;
+    }
+    app-footer footer {
+        display: none;
+        background-color: none;
+    }
+    input, textarea{
+        max-width: 70%;
+        margin: 20px;
+        min-height: 7%;
+    }
+  }

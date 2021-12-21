@@ -1,0 +1,118 @@
+img{
+    max-width: 15%; //4
+    max-height: 18%;  //5
+}
+.number-input{
+    display: grid;
+}
+.product-elements{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.product-element{
+    margin-left: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.product-element-number{
+    margin-left:4vh;
+}
+.product-element2{
+    margin-left: 40px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.product-element3{
+    margin-left: 40px;
+    margin-bottom: 50px;
+    margin-top:4vh;
+}
+select{
+    max-height: 50px;
+}
+.detail-names{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.detail-names p{
+    margin-left: 35px;
+}
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-left: 25px;
+}
+.item-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+input, textarea{
+    max-width: 40%;
+    margin: 20px;
+    min-height: 4%;
+}
+p{
+    margin: 10px;
+    font-size: 30px;
+}
+.submitBtn{
+    margin-right: 0px;
+    background-color: #333132;
+    color: white;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+}
+.submitBtn:hover{
+background-color: #575456;
+}
+input{
+    height: 30px;
+}
+.products-wrapper, .product-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product-div{
+    width: 50%;
+}
+.img-el{
+    min-width: 200px;
+    min-height: 250px;
+}
+.product-name, .price{
+    align-self: center;
+}
+.quantity-input{
+    align-self: center;
+    margin-bottom: 70px;
+}
+textarea, input{
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+@media only screen and (max-width: 800px) {
+    .item-container{
+        display: grid;
+        grid-template-columns:  auto;
+    }
+  }
+  
