@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mail = require("@sendgrid/mail");
-const API="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";
+const API="";
 const details = require("./details.json");
 
 const app = express();
